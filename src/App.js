@@ -52,6 +52,7 @@ class Game extends React.Component {
           squares: Array(9).fill(null),
         },
       ],
+      stepNumber: 0,
       xIsNext: true,
     };
   }
@@ -84,6 +85,7 @@ class Game extends React.Component {
         'Go to game start';
       return (
         <li>
+        <li key={move}></li>
           <button onClick={() => this.jumpTo(move)}>{desc}</button>
         </li>
       );
